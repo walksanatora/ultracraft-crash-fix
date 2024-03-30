@@ -18,6 +18,6 @@ public class UnFuckTheWeaponsMixin {
 	@Inject(at = @At("HEAD"), method = "isItemBarVisible", cancellable = true, remap = false)
 	public void isItemBarVisible(ItemStack stack, CallbackInfoReturnable<Boolean> cir) {
 		UltracraftCrashFix.LOGGER.info("Just prevented a crash!");
-		cir.cancel();
+		cir.setReturnValue(false);
 	}
 }
