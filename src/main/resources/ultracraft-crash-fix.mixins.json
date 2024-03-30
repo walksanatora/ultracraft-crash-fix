@@ -1,11 +1,17 @@
 {
 	"required": true,
-	"package": "net.walksanator.ultracraftfix.mixin",
+	"package": "net.walksanator.ucfix.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"server": [
-      "UnFuckTheWeaponsMixin"
+		"UnFuckTheWeaponsMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
-	}
+	},
+	"client": [
+		"SupporterNeutererClient"
+	],
+	"mixins": [
+		"SupporterNeuterer"
+	]
 }

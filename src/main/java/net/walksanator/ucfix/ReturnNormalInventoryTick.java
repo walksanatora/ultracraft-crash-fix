@@ -1,4 +1,4 @@
-package net.walksanator.ultracraftfix;
+package net.walksanator.ucfix;
 
 import com.bawnorton.mixinsquared.api.MixinCanceller;
 
@@ -9,8 +9,9 @@ public class ReturnNormalInventoryTick implements MixinCanceller {
     @Override
     public boolean shouldCancel(List<String> targetClassNames, String mixinClassName) {
         if (Objects.equals(mixinClassName, "absolutelyaya.ultracraft.mixin.PlayerInventoryMixin")) {
-            Ultracraftcrashfix.LOGGER.info("disabling PlayerInventoryMixin of ultracraft");
+            UltracraftCrashFix.LOGGER.info("disabling PlayerInventoryMixin of ultracraft");
+            return true;
         }
-        return Objects.equals(mixinClassName, "absolutelyaya.ultracraft.mixin.PlayerInventoryMixin");
+        return false;
     }
 }

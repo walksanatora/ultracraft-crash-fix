@@ -16,10 +16,10 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"net.walksanator.ultracraftfix.Ultracraftcrashfix"
+          "net.walksanator.ucfix.UltracraftCrashFix"
 		],
 		"mixinsquared": [
-			"net.walksanator.ultracraftfix.ReturnNormalInventoryTick"
+			"net.walksanator.ucfix.ReturnNormalInventoryTick"
 		]
 	},
 	"mixins": [
